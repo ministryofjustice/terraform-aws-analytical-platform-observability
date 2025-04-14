@@ -10,14 +10,17 @@ This Terraform module provisions the required resources for Analytical Platform'
 
 ## Usage
 
-### From Modernisation Platform Environments
-
 ```hcl
-module "observability_platform_tenant" {
-  source  = "ministryofjustice/observability-platform-tenant/aws"
-  version = "X.X.X"
+module "analytical_platform" {
+  source = "github.com/ministryofjustice/terraform-aws-analytical-platform-observability?ref=<version>"
 
-  observability_platform_account_id = local.environment_management.account_ids["observability-platform-production"]
+  enable_cloudwatch_read_only_access    = true
+  enable_amazon_prometheus_query_access = true
+  enable_aws_xray_read_only_access      = true
+
+  additional_policies = {
+    managed_prometheus_kms_access = module.managed_prometheus_kms_access_iam_policy.arn
+  }
 
   tags = local.tags
 }
@@ -28,7 +31,3 @@ module "observability_platform_tenant" {
 ```bash
 make test
 ```
-
-### Contributing
-
-The base branch requires _all_ commits to be signed. Learn more about signing commits [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).

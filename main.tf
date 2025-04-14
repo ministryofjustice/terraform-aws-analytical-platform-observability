@@ -30,20 +30,20 @@ resource "aws_iam_role_policy_attachment" "cloudwatch_read_only_access" {
 resource "aws_iam_role_policy_attachment" "amazon_prometheus_query_access" {
   count = var.enable_amazon_prometheus_query_access ? 1 : 0
 
-  role       = module.iam_role.iam_role_arn
+  role       = module.iam_role.iam_role_name
   policy_arn = "arn:aws:iam::aws:policy/AmazonPrometheusQueryAccess"
 }
 
 resource "aws_iam_role_policy_attachment" "aws_xray_read_only_access" {
   count = var.enable_aws_xray_read_only_access ? 1 : 0
 
-  role       = module.iam_role.iam_role_arn
+  role       = module.iam_role.iam_role_name
   policy_arn = "arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess"
 }
 
 resource "aws_iam_role_policy_attachment" "additional_policies" {
   for_each = { for k, v in var.additional_policies : k => v }
 
-  role       = module.iam_role.iam_role_arn
+  role       = module.iam_role.iam_role_name
   policy_arn = each.value
 }
