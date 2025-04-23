@@ -1,6 +1,9 @@
 locals {
-  role_name        = "analytical-platform-observability"
-  trusted_role_arn = "arn:aws:iam::754256621582:role/cloud-platform-irsa-5b82e7568d4a6d7b-live"
+  role_name = "analytical-platform-observability"
+  trusted_role_arns = [
+    "arn:aws:iam::754256621582:role/cloud-platform-irsa-5b82e7568d4a6d7b-live", # analytical-platform-development
+    "arn:aws:iam::754256621582:role/cloud-platform-irsa-35e269a04b3603d7-live"  # analytical-platform-production
+  ]
 }
 
 module "iam_role" {
@@ -15,7 +18,7 @@ module "iam_role" {
   role_name         = local.role_name
   role_requires_mfa = false
 
-  trusted_role_arns = [local.trusted_role_arn]
+  trusted_role_arns = local.trusted_role_arns
 
   tags = var.tags
 }
