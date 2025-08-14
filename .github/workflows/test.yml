@@ -21,15 +21,20 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set Up UV
+        id: setup_uv
+        uses: astral-sh/setup-uv@d9e0f98d3fc6adb07d1e3d37f3043649ddad06a1 # v6.5.0
+        with:
+          activate-environment: true
+
+      - name: Sync Dependencies
+        id: sync_dependencies
+        run: |
+          uv sync --frozen
+
       - name: Set Up Terraform
         id: setup_terraform
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
-
-      - name: Install LocalStack Tools
-        id: install_localstack_tools
-        shell: bash
-        run: |
-          pip install --requirement requirements-dev.txt
 
       - name: Test
         id: test

@@ -1,0 +1,14 @@
+[project]
+name = "terraform-aws-analytical-platform-observability"
+version = "4.0.0"
+description = "Analytical Platform Observability Terraform Module"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "awscli-local==0.22.2",
+    "pre-commit==4.3.0",
+    "terraform-local==0.24.1",
+]

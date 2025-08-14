@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Upgrade Pip
-pip install --break-system-packages --upgrade pip
+echo "Running 'uv sync --frozen'"
+uv sync --frozen
 
-# Install dependencies
-pip install --break-system-package --requirement requirements-dev.txt
+echo "Running 'uv run pre-commit install'"
+uv run pre-commit install
