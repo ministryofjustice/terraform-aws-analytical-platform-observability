@@ -3,6 +3,7 @@
     "image": "ghcr.io/ministryofjustice/devcontainer-base:latest",
     "features": {
       "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+      "ghcr.io/ministryofjustice/devcontainer-feature/astral:1": {},
       "ghcr.io/ministryofjustice/devcontainer-feature/aws:1": {},
       "ghcr.io/ministryofjustice/devcontainer-feature/terraform:1": {}
     },
@@ -13,7 +14,12 @@
           "EditorConfig.EditorConfig",
           "GitHub.vscode-github-actions",
           "GitHub.vscode-pull-request-github"
-        ]
+        ],
+        "settings": {
+          "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+          "python.terminal.activateEnvInCurrentTerminal": true,
+          "python.venvFolders": ["${workspaceFolder}/.venv"]
+        }
       }
     }
   }
