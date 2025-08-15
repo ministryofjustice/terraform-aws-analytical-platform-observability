@@ -17,7 +17,7 @@ module "iam_role" {
   use_name_prefix = false
 
   trust_policy_permissions = {
-    trusted_role_arns = {
+    TrustedRoles = {
       actions = [
         "sts:AssumeRole",
         "sts:TagSession"
