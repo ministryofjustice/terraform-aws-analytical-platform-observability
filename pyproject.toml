@@ -9,6 +9,6 @@ dependencies = []
 [dependency-groups]
 dev = [
     "awscli-local==0.22.2",
-    "pre-commit==4.3.0",
+    "pre-commit==4.5.0",
     "terraform-local==0.24.1",
 ]
