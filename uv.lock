@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 
 [[package]]
@@ -265,21 +265,21 @@ dev = [
 dev = [
     { name = "awscli-local", specifier = "==0.22.2" },
     { name = "pre-commit", specifier = "==4.3.0" },
-    { name = "terraform-local", specifier = "==0.24.1" },
+    { name = "terraform-local", specifier = "==0.25.0" },
 ]
 
 [[package]]
 name = "terraform-local"
-version = "0.24.1"
+version = "0.25.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "localstack-client" },
     { name = "packaging" },
     { name = "python-hcl2" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/06/8a/61237cd8b95d41f2e997fee78f1a05fd3f5e65845cfe7aae9362a9d28022/terraform_local-0.24.1.tar.gz", hash = "sha256:2cfaeb283a1753083f3f59be1a2e08d225286913633694d695b04bba9913ae91", size = 23104, upload-time = "2025-07-24T07:10:21.927Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/48/30/3ca48aa0615960bc891c976512df7cca1ecf72535446f4bbe9b1ac110ebf/terraform_local-0.25.0.tar.gz", hash = "sha256:8730cfc92dcdbfcb10293420cafb22566d56a2af58139e8a976828b10e07c7e2", size = 23830, upload-time = "2025-12-01T16:27:05.37Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c4/e2/4a636ca3a9ec619de9c4fd1bb52564fe886a29fe7ccb1b92011589a70737/terraform_local-0.24.1-py3-none-any.whl", hash = "sha256:159115b60851fd491d4e5037017078ad5e8d87d0f514a00c98d838ad8dab12a6", size = 16454, upload-time = "2025-07-24T07:20:25.847Z" },
+    { url = "https://files.pythonhosted.org/packages/1b/2f/4b7c68c43505d5a8769cbddf4dae0069b44e7f7f1c81a32d33777bdf1448/terraform_local-0.25.0-py3-none-any.whl", hash = "sha256:769044ec37a571c0c22e4e8bda1848f45baa56ff64f4cab636ea179faac61af9", size = 16636, upload-time = "2025-12-01T16:27:04.067Z" },
 ]
 
 [[package]]
