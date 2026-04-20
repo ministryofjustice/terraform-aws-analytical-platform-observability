@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 
 [[package]]
@@ -162,15 +162,15 @@ wheels = [
 
 [[package]]
 name = "python-hcl2"
-version = "7.3.1"
+version = "8.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "lark" },
     { name = "regex" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/50/8e/f82ed407a10c2dd4228ff0fceec8a16dd6a9191a2ed119233c04dccf2ca4/python_hcl2-7.3.1.tar.gz", hash = "sha256:f8f55583703daf7bbcb595a33c68de891064d565974ea39998b81d15a4c4657b", size = 35352, upload-time = "2025-07-24T12:33:49.883Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/39/7b/6c9c973484a482f833a1b88ab69e078e05cc1f761af1839d5cbe7e7fad92/python_hcl2-8.1.2.tar.gz", hash = "sha256:ae809c7e6e39e8c3c3555e7b7f389082207929591fcba062c9f76afb1abe972d", size = 114685, upload-time = "2026-04-10T14:27:44.527Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/99/56/8f6418645fee59dd7a85a6e155d13ebf07608edc98965b211b0ed86ef35a/python_hcl2-7.3.1-py3-none-any.whl", hash = "sha256:6bf6036d3dffac04e05e6aa58ff6e9a3710bba2171325584dfd7b3f8c99c6d4d", size = 22426, upload-time = "2025-07-24T12:33:49.015Z" },
+    { url = "https://files.pythonhosted.org/packages/5d/c7/10c7832ec3050a191c756f4a591c9033fbfb8e10688e979efb5c4ca4265c/python_hcl2-8.1.2-py3-none-any.whl", hash = "sha256:ac3d16dc6501d4f24db348b3a634afdfb5c10a6715b27cd105a5b77071b84ee3", size = 98951, upload-time = "2026-04-10T14:27:43.529Z" },
 ]
 
 [[package]]
@@ -265,21 +265,21 @@ dev = [
 dev = [
     { name = "awscli-local", specifier = "==0.22.2" },
     { name = "pre-commit", specifier = "==4.3.0" },
-    { name = "terraform-local", specifier = "==0.24.1" },
+    { name = "terraform-local", specifier = "==0.26.0" },
 ]
 
 [[package]]
 name = "terraform-local"
-version = "0.24.1"
+version = "0.26.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "localstack-client" },
     { name = "packaging" },
     { name = "python-hcl2" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/06/8a/61237cd8b95d41f2e997fee78f1a05fd3f5e65845cfe7aae9362a9d28022/terraform_local-0.24.1.tar.gz", hash = "sha256:2cfaeb283a1753083f3f59be1a2e08d225286913633694d695b04bba9913ae91", size = 23104, upload-time = "2025-07-24T07:10:21.927Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/f7/7d128b483dfd03d178c37eedc8c9329d7ee0abc4781bcfe5a0069ee63d79/terraform_local-0.26.0.tar.gz", hash = "sha256:958abac78c40b15fca6edcd833a9706a28e1cc861cb713e3fed5def345d518b8", size = 25009, upload-time = "2026-04-13T10:59:02.071Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c4/e2/4a636ca3a9ec619de9c4fd1bb52564fe886a29fe7ccb1b92011589a70737/terraform_local-0.24.1-py3-none-any.whl", hash = "sha256:159115b60851fd491d4e5037017078ad5e8d87d0f514a00c98d838ad8dab12a6", size = 16454, upload-time = "2025-07-24T07:20:25.847Z" },
+    { url = "https://files.pythonhosted.org/packages/24/71/44639b1e5875266dca5e1249550047387f48bb4619cf0bbb174dd66a22d0/terraform_local-0.26.0-py3-none-any.whl", hash = "sha256:e4c76f1196afb5748fb5edc67b5db24573f5f0cc2682fdd4c5d4cf31d93f73a3", size = 17260, upload-time = "2026-04-13T10:59:00.614Z" },
 ]
 
 [[package]]
